@@ -53,4 +53,4 @@ async def rules():
 async def botinfo():
     await bot.say("```This is a bot created by Xinozz. This bot is currently in a very early stage. More features are coming soon!```")
 
-bot.run("NTAxMDEzNzk4NTIyNDU0MDE2.DqTNCQ.AJLbh2gPf5RHjQ3FnqU3uZDb72I")
+bot.run("")
