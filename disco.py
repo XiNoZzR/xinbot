@@ -4,12 +4,17 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 bot = commands.Bot(command_prefix = "!")
+hello = "Hello"
 
 @bot.event
 async def on_ready():
     print("Bot is booting...")
     print("Hello", bot.user.name)
     print("Bot is online!")
+
+@bot.command(pass_context = True)
+async def hlp():
+    await bot.say("Do you need help on something with this bot or server? Contact Xinozz for help. Twitter.com/Xinozz_")
 
 @bot.command(pass_context = True)
 async def cmds():
@@ -52,5 +57,38 @@ async def rules():
 @bot.command(pass_context = True)
 async def botinfo():
     await bot.say("```This is a bot created by Xinozz. This bot is currently in a very early stage. More features are coming soon!```")
+
+@bot.command(pass_context = True)
+async def hello(message):
+    await bot.say("Hello!")
+
+@bot.command(pass_context = True)
+async def member_join(member):
+    await member.send("Hello, welcome to the server. Enjoy your time here")
+
+@bot.command(pass_context = True)
+async def hi():
+    await bot.say("Hi!")
+@bot.command(pass_context = True)s
+async def memes():
+    await bot.say("Memes are coming soon!")
+
+@bot.command(pass_context = True)
+async def sup():
+    await bot.say("Sup!")
+
+@bot.command(pass_context = True)
+async def whatsup():
+    await bot.say("What's up?")
+
+@bot.command(pass_context = True)
+async def howsitgoing():
+    await bot.say("How's it going?")
+
+@bot.event
+async def helpp():
+    if helpp.content == "help":
+        await bot.say("How can I help you?")
+
 
 bot.run("")
