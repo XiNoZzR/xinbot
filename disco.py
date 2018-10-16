@@ -69,7 +69,7 @@ async def member_join(member):
 @bot.command(pass_context = True)
 async def hi():
     await bot.say("Hi!")
-@bot.command(pass_context = True)s
+@bot.command(pass_context = True)
 async def memes():
     await bot.say("Memes are coming soon!")
 
