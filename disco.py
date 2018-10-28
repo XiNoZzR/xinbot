@@ -1,4 +1,5 @@
 import discord
+import youtube_dl
 import asyncio
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -90,5 +91,8 @@ async def helpp():
     if helpp.content == "help":
         await bot.say("How can I help you?")
 
+@bot.command(pass_context = True)
+async def googlesearch():
+    await bot.say("The Google Search feature is coming soon for this bot.")
 
 bot.run("")
