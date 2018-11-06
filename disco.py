@@ -99,4 +99,4 @@ async def googlesearch():
 async def hosting():
     await bot.say("This bot is being hosted on Heroku.")
 
-bot.run("NTAxMDEzNzk4NTIyNDU0MDE2.DsNUGw.EXYqQmVjW7Hy5nelrcyJ6v9tfqM")
+bot.run("")
