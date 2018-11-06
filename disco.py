@@ -95,4 +95,8 @@ async def helpp():
 async def googlesearch():
     await bot.say("The Google Search feature is coming soon for this bot.")
 
-bot.run("")
+@bot.command(pass_context = True)
+async def hosting():
+    await bot.say("This bot is being hosted on Heroku.")
+
+bot.run("NTAxMDEzNzk4NTIyNDU0MDE2.DsNUGw.EXYqQmVjW7Hy5nelrcyJ6v9tfqM")
