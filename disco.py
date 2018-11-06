@@ -97,6 +97,16 @@ async def googlesearch():
 
 @bot.command(pass_context = True)
 async def hosting():
-    await bot.say("This bot is being hosted on Heroku.")
+    await bot.say("This bot is usually hosted on repl.it!")
+
+@bot.command(pass_context = True)
+async def on_message(message):
+    if message.content.startswith ("game"):
+       msg = await bot.say("Say hi or hey.")
+       if msg.content == "hi":
+           await bot.say("Hi!")
+       if msg.content == "hello":
+           await bot.say("Hello!")
+
 
 bot.run("")
