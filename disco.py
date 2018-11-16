@@ -101,12 +101,35 @@ async def hosting():
 
 @bot.command(pass_context = True)
 async def on_message(message):
-    if message.content.startswith ("game"):
+    if message.content.startswith:
        msg = await bot.say("Say hi or hey.")
        if msg.content == "hi":
            await bot.say("Hi!")
        if msg.content == "hello":
            await bot.say("Hello!")
+
+@bot.command(pass_context = True)
+async def github():
+    await bot.say("Source code for this bot is availible at: https://github.com/XiNoZzR/xinbot")
+
+@bot.command(pass_context = True)
+async def join(ctx):
+    chnl = ctx.message.author.voice_channel
+    await bot.join_voice_channel(chnl)
+
+@bot.command(pass_context = True)
+async def leave(ctx):
+    server = ctx.message.server
+    voice_bot = bot.voice_client_in(server)
+    await voice_channel.disconnect()
+
+@bot.command(pass_context = True)
+async def play(ctx/url):
+    server = ctx.message.server
+    voice_bot = bot.voice_client_in(server)
+    player = await voice_client.create_ytdl_player(url)
+    players[server.id] = player
+    player.start()
 
 
 bot.run("")
